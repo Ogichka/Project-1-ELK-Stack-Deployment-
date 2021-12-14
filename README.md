@@ -115,5 +115,3 @@ SSH into the control node and follow the steps below:
 =======
 - ansible -m ping all                 > to check the connection of ansible containers 
 
-
-                                                                       _prepared by Ognen Nastoski_
