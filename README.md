@@ -97,7 +97,7 @@ In order to use the playbook, you will need to have an Ansible control node alre
 
 SSH into the control node and follow the steps below:
 - Copy the [install-elk.yml](https://github.com/Ogichka/Project-1-ELK-Stack-Deployment-/blob/main/Ansible/install-elk.yml) file to /etc/ansible.
-- Update the [hosts](https://github.com/Ogichka/Project-1-ELK-Stack-Deployment-/blob/main/Ansible/hosts.txt) file to include ELK hosts and then add the machine IP address, followed by ansible_python_interpreter=/usr/bin/python3 
+- Update the [hosts](https://github.com/Ogichka/Project-1-ELK-Stack-Deployment-/blob/main/Ansible/hosts.txt) file to include ELK hosts and then add the machine IP address, followed by ansible_python_interpreter=/usr/bin/python3. Filebeat should be installed on the web servers that are accepting traffic which then send that data to the ELK server. 
 - Run the playbook, and navigate to http://[your.VM.IP]:5601/app/kibana to check that the installation worked as expected.
 
 ### Additional commands:
