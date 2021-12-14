@@ -85,7 +85,7 @@ This ELK server is configured to monitor the following machines:
 - _Web3 10.0.0.7_
 
 We have installed the following Beats on these machines:
-- _Filebeats
+- _Filebeats_
 - _Metricbeats_
 
 These Beats allow us to collect the following information from each machine:
