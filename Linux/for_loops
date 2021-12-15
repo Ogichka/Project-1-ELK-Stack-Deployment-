@@ -1,0 +1,23 @@
+#!/bin/bash
+
+# variables
+
+nums=$(echo {0..9})
+ls_out=$(ls)
+
+#new exemple 
+US_fav_states=('Florida','North_Carolina', 'Hawaii', 'California', 'New York')
+
+
+for state in ${US_fav_states[@]}; do
+
+  if [ $state == 'Hawaii' ]; then
+ 
+     echo "Hawaii is the best!" 
+
+   else 
+     echo "I'm not fan of Hawaii." 
+
+   fi
+ 
+done 

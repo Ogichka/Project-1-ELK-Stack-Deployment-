@@ -1,0 +1,8 @@
+commands=('date' 'uname -a' 'hostname -s')
+
+for numCommand in {0..2};
+do 
+   results=$(${commands[$numCommand]})
+   echo "The results of the $item command are:"
+   echo $results
+done 

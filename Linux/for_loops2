@@ -1,0 +1,50 @@
+#!/bin/bash
+
+my_list=(a b c d e f)
+echo ${my_list[@]}
+
+
+# new example
+
+my_list=('mon' 'tues' 'wed' 'thurs' 'fri')
+echo ${my_list[2]}
+echo ${my_list[@]}
+echo {a..z}
+
+# new example
+
+days=('mon' 'tues' 'wed' 'thur' 'fri' 'sat' 'sun')
+for i in ${days[@]}
+do
+    if [ $i = 'sun' ] || [ $i = 'sat' ]
+    then
+        echo "It is the weekend! Take it easy!"
+    else
+        echo "It is a weekday! Get to work!"
+    fi
+
+done
+
+# new example
+
+for i in ${days[@]}
+do
+  echo $i
+done
+ 
+# new example
+
+for i in $(ls);
+do
+  ls -lah $i
+done
+
+# new example
+
+for num in {0..5}
+do
+    if [ $num = 1 ] || [ $num = 4 ]
+    then
+      echo $num
+   fi 
+done

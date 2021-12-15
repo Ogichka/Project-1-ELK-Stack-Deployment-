@@ -1,0 +1,55 @@
+#!/bin/bash
+
+#to run the script remove the comments
+<< 'COMMENTS'
+# Define packages list
+packages=('nano' 'wget' 'net-tools')
+
+# loop through the list of packages and check to see if they are installed
+
+for i in ${packages[@]}
+
+do
+    if [ $(which $i) ]
+    then
+        echo "$i is installed at $(which $i)."
+    else
+        echo "$i is not installed."
+
+    fi
+done
+COMMENTS
+
+# new example
+
+
+# Search each user's home directory for scripts and provide a formatted output.
+<< 'COMMENTS'
+for i in $(ls /home)
+do
+    for item in $(find /home/$i -iname '*.sh')
+    do
+        echo -e "Found a script in $i's home folder! \n$item"
+    done
+done
+COMMENTS
+
+# new example
+<< 'COMMENTS'
+# loop through scripts in my scripts folder and set permissions to executable
+for i in $(ls ~/scripts)
+do
+    if [ ! -x ~/scripts/$i ]
+    then
+        chmod +x ~/scripts/$i
+    fi
+done
+COMMENTS
+# new example
+
+# loop through a list of files and create a hash of each file.
+for i in $(ls ~/Documents/files_for_hashing/)
+# I dont have the above file (this is an example)
+do
+    sha256sum $i
+done

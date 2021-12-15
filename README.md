@@ -4,7 +4,7 @@ Repository for Linux scripts, Ansible YAML scripts, Network diagrams
 
 The files in this repository were used to configure the network depicted below.
 
-![](Diagrams/Project%201%20Diagram.png)
+![](Diagrams/Project1_Diagram_new.png)
 
 These files have been tested and used to generate a live ELK deployment on Azure. They can be used to either recreate the entire deployment pictured above. Alternatively, select portions of the playbook file may be used to install only certain pieces of it, such as Filebeat.
 
@@ -110,8 +110,5 @@ SSH into the control node and follow the steps below:
 - sudo docker run                     > to create and run a new container
 - sudo docker ps -a                   > to list all active/inactive containers
 - ssh-keygen                          > to create a ssh key
-<<<<<<< HEAD
-- ansible -m ping all                 > to check the connection of ansible containers 
-=======
-- ansible -m ping all                 > to check the connection of ansible containers 
->>>>>>> 408aa4d513b4ac0121ef3c1019d61449dc674138
+- ansible -m ping all                 > to check the connection of ansible containers
+

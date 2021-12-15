@@ -1,0 +1,6 @@
+#!/bin/bash
+
+# To run the script  ./script_name parameter_1 parameter_2
+# $1 password
+# $2 name of the file where to store the key and iv
+openssl enc -pbkdf2 -nosalt -aes-256-cbc -k $1 -P > $2

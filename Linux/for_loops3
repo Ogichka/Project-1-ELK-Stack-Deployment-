@@ -1,0 +1,39 @@
+#!/bin/bash
+
+# to run the script remove << 'COMMENTS' and COMMENTS
+
+fav_states=('Florida' "North_Carolina" 'Hawaii' 'California' 'Colorado')
+
+for i in ${fav_states[@]} 
+do
+  if [ $i == 'Hawaii' ];
+then
+  echo "Hawaii is the best!"
+else
+  echo "I am not fan of Hawaii"
+fi
+done
+
+# new example
+
+num=$(echo {0..9})
+
+for i in ${num[@]}
+
+for i in {0..9}
+do 
+  if [ $i = 3 ] || [ $i = 5 ] || [ $i = 7 ];
+then 
+   echo $i
+fi
+done
+
+
+# new example
+
+ls_out=$(ls)
+
+for x in ${ls_out[@]}
+do 
+  echo $x
+done

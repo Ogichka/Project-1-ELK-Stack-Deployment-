@@ -1,0 +1,15 @@
+#!/bin/bash
+
+# this is a script fo installing packages
+# make a list of packages you want to install
+
+packages=('nano ' 'curl' .........)
+
+for i in ${packages[@]}
+do
+  if [ ! $(which $i) ]
+  then
+    apt install -y $i
+# the -y option will answer yes to any questions the installer has
+  fi
+done

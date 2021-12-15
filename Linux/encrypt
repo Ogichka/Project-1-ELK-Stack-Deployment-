@@ -1,0 +1,10 @@
+#!/bin/bash
+
+# To run the script  ./script_name parameter_1 parameter_2 ...
+
+# $1 = file that we want to encrypt. Should be .txt
+# $2 = name of the encrypted file. Should end with .enc
+# $3 = key
+# $4 = iv
+
+openssl enc -pbkdf2 -nosalt -aes-256-cbc -in $1 -out $2 -base64 -K $3 -iv $4

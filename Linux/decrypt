@@ -1,0 +1,9 @@
+#1/bin/bash
+
+# To run the script  ./script_name parameter_1 parameter_2
+
+# $1 = file to decrypt
+# $2 = key
+# $3 = iv
+
+openssl enc -pbkdf2 -nosalt -aes-256-cbc -in $1 -d -base64 -K $2 -iv $3
