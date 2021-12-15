@@ -110,8 +110,6 @@ SSH into the control node and follow the steps below:
 - sudo docker run                     > to create and run a new container
 - sudo docker ps -a                   > to list all active/inactive containers
 - ssh-keygen                          > to create a ssh key
-<<<<<<< HEAD
 - ansible -m ping all                 > to check the connection of ansible containers 
-=======
 - ansible -m ping all                 > to check the connection of ansible containers 
 
