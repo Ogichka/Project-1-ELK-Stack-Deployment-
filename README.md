@@ -55,7 +55,7 @@ A summary of the access policies in place can be found in the table below.
 
 | Name       | Publicly Accessible | Allowed IP Addresses        |
 |------------|---------------------|-----------------------------|
-| Jump Box   | No                  | 99.164.84.160               |
+| Jump Box   | Yes                 | 99.164.84.160               |
 | Web1       | No                  | 10.0.0.6                    | 
 | Web2       | No                  | 10.0.0.6                    |
 | Web3       | No                  | 10.0.0.6                    |
@@ -86,12 +86,20 @@ This ELK server is configured to monitor the following machines:
 
 We have installed the following Beats on these machines:
 - _Filebeats_
+
+![](README/Images/Filebeat_status.png)
+
 - _Metricbeats_
+
+![](README/Images/Metricbeat-status.png)
 
 These Beats allow us to collect the following information from each machine:
 - _Filebeats collect data about the file system, such as log events which enables analysts to monitor files for suspicious changes._
+
+![](README/Images/Filebeat_dashboard.png)
 - _Metricbeats collect machine metrics, such as uptime and CPU usage._
 
+![](README/Images/Metricbeat_dashboard.png)
 ### Using the Playbook
 In order to use the playbook, you will need to have an Ansible control node already configured. Assuming you have such a control node provisioned: 
 
@@ -111,4 +119,7 @@ SSH into the control node and follow the steps below:
 - sudo docker ps -a                   > to list all active/inactive containers
 - ssh-keygen                          > to create a ssh key
 - ansible -m ping all                 > to check the connection of ansible containers
-
+- nano /etc/ansible/hosts             > to edit the hosts file
+- nano my-playbook.yml > to create and edit my-playbook file
+- ansible -m ping all	> check the connection of ansible containers
+- curl -L -O [location_of_the_file_on_the_web]	> to download a file from the web
